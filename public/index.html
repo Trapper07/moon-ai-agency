@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moon AI Agency - Transform your business with cutting-edge AI solutions">
+    <meta name="keywords" content="AI, artificial intelligence, machine learning, business solutions, Moon AI">
+    <title>Moon AI Agency ✨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      .gradient-text {
+        background: linear-gradient(45deg, #6366f1, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+      @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+      }
+      .dark-mode {
+        background-color: #1a1a1a;
+        color: #ffffff;
+      }
+      .loading-dots:after {
+        content: '.';
+        animation: dots 1.5s steps(5, end) infinite;
+      }
+      @keyframes dots {
+        0%, 20% { content: '.'; }
+        40% { content: '..'; }
+        60% { content: '...'; }
+        80%, 100% { content: ''; }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl font-bold gradient-text">
+            <i class="fas fa-moon"></i> Moon AI Agency
+          </h1>
+          <div class="hidden md:flex space-x-8">
+            <a href="#services" class="text-gray-600 hover:text-purple-600">Services</a>
+            <a href="#how-it-works" class="text-gray-600 hover:text-purple-600">How it Works</a>
+            <a href="#portfolio" class="text-gray-600 hover:text-purple-600">Portfolio</a>
+            <a href="#pricing" class="text-gray-600 hover:text-purple-600">Pricing</a>
+            <a href="#testimonials" class="text-gray-600 hover:text-purple-600">Testimonials</a>
+            <a href="#contact" class="text-gray-600 hover:text-purple-600">Contact</a>
+            <button onclick="toggleDarkMode()" class="text-gray-600 hover:text-purple-600">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+          <button class="md:hidden text-gray-600">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="pt-24 pb-20 bg-gradient-to-r from-indigo-500 to-purple-600">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="floating inline-block mb-6 text-6xl text-white">
+          <i class="fas fa-moon"></i>
+        </div>
+        <h2 class="text-4xl font-bold text-white mb-6" data-aos="fade-up">Transform Your Business with Moon AI Magic</h2>
+        <p class="text-xl text-white mb-8" data-aos="fade-up" data-aos-delay="100">Innovative AI solutions for the modern digital age</p>
+        <a href="#contact" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all" data-aos="fade-up" data-aos-delay="200">
+          Get Started <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-up">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up">
+            <div class="text-4xl mb-4 text-purple-600">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">AI Consulting</h3>
+            <p class="text-gray-600">Expert guidance on AI implementation</p>
+          </div>
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-4xl mb-4 text-purple-600">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Custom AI Solutions</h3>
+            <p class="text-gray-600">Tailored AI systems for your needs</p>
+          </div>
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-4xl mb-4 text-purple-600">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Data Analytics</h3>
+            <p class="text-gray-600">Turn your data into insights</p>
+          </div>
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-4xl mb-4 text-purple-600">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">AI Integration</h3>
+            <p class="text-gray-600">Seamless AI implementation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it Works -->
+    <div id="how-it-works" class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-up">How We Work</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up">
+            <div class="text-4xl mb-4 text-purple-600">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">1. Discovery</h3>
+            <p class="text-gray-600">Understanding your needs</p>
+          </div>
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-4xl mb-4 text-purple-600">
+              <i class="fas fa-pencil-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">2. Planning</h3>
+            <p class="text-gray-600">Creating the perfect solution</p>
+          </div>
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-4xl mb-4 text-purple-600">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">3. Development</h3>
+            <p class="text-gray-600">Building your AI solution</p>
+          </div>
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-4xl mb-4 text-purple-600">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">4. Launch</h3>
+            <p class="text-gray-600">Deploying and optimizing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div id="portfolio" class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-up">Our Portfolio</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
+            <div class="h-48 bg-purple-100 flex items-center justify-center text-6xl text-purple-600">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">AI Chatbot</h3>
+              <p class="text-gray-600">Customer service automation</p>
+            </div>
+          </div>
+          <div class="card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-48 bg-indigo-100 flex items-center justify-center text-6xl text-indigo-600">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Predictive Analytics</h3>
+              <p class="text-gray-600">Sales forecasting system</p>
+            </div>
+          </div>
+          <div class="card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-48 bg-purple-100 flex items-center justify-center text-6xl text-purple-600">
+              <i class="fas fa-eye"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Computer Vision</h3>
+              <p class="text-gray-600">Quality control system</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div id="pricing" class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-up">Pricing Plans</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up">
+            <div class="text-4xl mb-4">🌱</div>
+            <h3 class="text-xl font-semibold mb-2">Starter</h3>
+            <p class="text-3xl font-bold mb-4">$999<span class="text-sm text-gray-600">/mo</span></p>
+            <ul class="space-y-2 mb-8">
+              <li>✅ Basic AI Integration</li>
+              <li>✅ 24/7 Support</li>
+              <li>✅ Monthly Reports</li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-2 rounded-lg">Get Started</button>
+          </div>
+          <div class="card bg-white p-8 rounded-xl shadow-lg transform scale-105 border-2 border-purple-500" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-4xl mb-4">⭐</div>
+            <h3 class="text-xl font-semibold mb-2">Professional</h3>
+            <p class="text-3xl font-bold mb-4">$2,499<span class="text-sm text-gray-600">/mo</span></p>
+            <ul class="space-y-2 mb-8">
+              <li>✅ Advanced AI Solutions</li>
+              <li>✅ Priority Support</li>
+              <li>✅ Weekly Reports</li>
+              <li>✅ Custom Integration</li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-2 rounded-lg">Get Started</button>
+          </div>
+          <div class="card bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-4xl mb-4">🚀</div>
+            <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
+            <p class="text-3xl font-bold mb-4">Custom</p>
+            <ul class="space-y-2 mb-8">
+              <li>✅ Full AI Suite</li>
+              <li>✅ 24/7 VIP Support</li>
+              <li>✅ Daily Reports</li>
+              <li>✅ Custom Solutions</li>
+              <li>✅ Dedicated Team</li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-2 rounded-lg">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-up">Client Testimonials</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up">
+            <div class="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+            <p class="text-gray-600 mb-4">"Moon AI transformed our business with their innovative solutions!"</p>
+            <div class="flex items-center">
+              <div class="text-3xl mr-3">👨‍💼</div>
+              <div>
+                <h4 class="font-semibold">John Smith</h4>
+                <p class="text-gray-600">CEO, Tech Corp</p>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+            <p class="text-gray-600 mb-4">"The best AI consulting service we've ever worked with!"</p>
+            <div class="flex items-center">
+              <div class="text-3xl mr-3">👩‍💼</div>
+              <div>
+                <h4 class="font-semibold">Sarah Johnson</h4>
+                <p class="text-gray-600">CTO, Innovation Inc</p>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+            <p class="text-gray-600 mb-4">"Outstanding results and amazing customer service!"</p>
+            <div class="flex items-center">
+              <div class="text-3xl mr-3">👨‍💼</div>
+              <div>
+                <h4 class="font-semibold">Michael Chen</h4>
+                <p class="text-gray-600">Director, Future Labs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="py-20 bg-gray-100">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8 gradient-text" data-aos="fade-up">Stay Updated</h2>
+        <p class="text-gray-600 mb-8" data-aos="fade-up">Subscribe to our newsletter for the latest AI insights and updates</p>
+        <form class="flex gap-4" data-aos="fade-up">
+          <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+          <button type="submit" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90">
+            Subscribe ✨
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="py-20">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-up">Get in Touch</h2>
+        <form class="space-y-6" data-aos="fade-up">
+          <div>
+            <input type="text" placeholder="Your Name 😊" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+          </div>
+          <div>
+            <input type="email" placeholder="Your Email 📧" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+          </div>
+          <div>
+            <textarea placeholder="Your Message ✍️" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:opacity-90">
+            Send Message ✨
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">🌙 Moon AI Agency</h3>
+            <p class="text-gray-400">Transforming businesses with AI solutions</p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Services</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>AI Consulting</li>
+              <li>Custom Solutions</li>
+              <li>Data Analytics</li>
+              <li>AI Integration</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Company</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>About Us</li>
+              <li>Portfolio</li>
+              <li>Testimonials</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Connect</h4>
+            <div class="flex space-x-4 text-2xl">
+              <a href="#" class="hover:text-purple-500">📱</a>
+              <a href="#" class="hover:text-purple-500">💼</a>
+              <a href="#" class="hover:text-purple-500">🐦</a>
+              <a href="#" class="hover:text-purple-500">📸</a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+          © 2024 Moon AI Agency. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="fixed bottom-4 right-4 z-50">
+      <button onclick="toggleChat()" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-2xl hover:opacity-90">
+        <i class="fas fa-comments"></i>
+      </button>
+    </div>
+
+    <!-- Chat Box -->
+    <div id="chatBox" class="fixed bottom-20 right-4 w-80 bg-white rounded-lg shadow-xl z-50 hidden">
+      <div class="p-4 border-b">
+        <h3 class="font-semibold">Moon AI Chat</h3>
+      </div>
+      <div class="p-4 h-80 overflow-y-auto" id="chatMessages">
+        <div class="mb-4">
+          <div class="font-semibold">Moon AI <i class="fas fa-moon"></i></div>
+          <div class="bg-gray-100 rounded-lg p-3 mt-1">
+            Hi! How can I help you today?
+          </div>
+        </div>
+      </div>
+      <div class="p-4 border-t">
+        <div class="flex gap-2">
+          <input type="text" placeholder="Type a message..." class="flex-1 px-3 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-purple-500">
+          <button class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-lg">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Initialize animations
+      document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+          duration: 1000,
+          once: true
+        });
+      });
+
+      // Dark mode toggle
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        const button = document.querySelector('button[onclick="toggleDarkMode()"]');
+        const icon = button.querySelector('i');
+        if (document.body.classList.contains('dark-mode')) {
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        } else {
+          icon.classList.remove('fa-sun');
+          icon.classList.add('fa-moon');
+        }
+      }
+
+      // Chat widget
+      function toggleChat() {
+        const chatBox = document.getElementById('chatBox');
+        chatBox.classList.toggle('hidden');
+      }
+    </script>
+  </body>
+</html> 
